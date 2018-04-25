@@ -9,7 +9,7 @@ describe('Main', function() {
   describe('#version', function() {
     it('should get the version', function(done) {
       var version = bitcoinconsensus.version();
-      version.should.equal(0);
+      version.should.equal(1);
       done();
     });
   });
