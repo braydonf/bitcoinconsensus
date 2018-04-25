@@ -1,32 +1,24 @@
-SYNOPSIS [![Build Status](https://api.travis-ci.org/bitpay/node-libbitcoinconsensus.svg?branch=master)](https://github.com/bitpay/node-libbitcoinconsensus)
-===
+# node-libbitcoinconsensus
 
-This module provides native bindings to Bitcoin's [libbitcoinconsensus](https://github.com/bitcoin/bitcoin) functions.   
+Node.js bindings to Bitcoin Core's script verification [libbitcoinconsensus](https://github.com/bitcoin/bitcoin/blob/master/doc/shared-libraries.md)
+
 This library is experimental, so use at your own risk.
 
-INSTALL
-===
+## Build
 
-##### from npm
 
-`npm install libbitcoinconsensus`   
-Note: you will need to have g++/llvm installed first   
-
-##### from git
 ```bash
-git clone git@github.com:bitpay/libbitcoinconsensus.js.git
-cd libbitcoinconsensus.js
+git clone git@github.com:braydonf/node-libbitcoinconsensus.git
+cd node-libbitcoinconsensus
 git submodule init
 git submodule update
 npm install
+npm test
 ```
 
+## Usage
 
-NOTE: if you get multiple deprecation warnings on Mac OS X, fear not, you are using Apple's built-in libraries, all should work fine ;) 
-
-USAGE
-===
-```javascript
+```js
 
 'use strict';
 
@@ -52,10 +44,10 @@ console.log(version);
 
 
 ```
-API
-===
 
-bitconconsensus.version() 
+## API
+
+bitconconsensus.version()
 -----------------------------
 Get the version of the libbitcoinconsensus library
 
@@ -63,7 +55,7 @@ Get the version of the libbitcoinconsensus library
 
 none
 
-**Returns**: String representing the version of the library. 
+**Returns**: String representing the version of the library.
 
 bitcoinconsensus.verifyScript(scriptPubKey, txTo, nIn, flags)
 -----------------------------
@@ -75,14 +67,10 @@ Verify the script according to the buffers sent in (scriptPubKey)
 * nInt - `integer`
 * flags - `integer`
 
-**Returns**: integer representing whether the script was valid (1) or not valid (0). 
+**Returns**: integer representing whether the script was valid (1) or not valid (0).
 
-**Throws**: String exception when an exception is handled by the native library.  
+**Throws**: String exception when an exception is handled by the native library.
 
-TEST
-===
-run `npm test`
-
-LICENSE
+License
 -----------------------------
 MIT
