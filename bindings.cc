@@ -34,7 +34,6 @@ void VerifyScript(const v8::FunctionCallbackInfo<Value>& args) {
 	}
 
 	args.GetReturnValue().Set(Nan::New<Number>(valid));
-
 }
 
 void Version(const v8::FunctionCallbackInfo<Value>& args) {

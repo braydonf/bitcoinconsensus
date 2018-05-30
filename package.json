@@ -1,38 +1,33 @@
 {
-  "name": "libbitcoinconsensus",
-  "description": "Node binding for libbitcoinconsensus",
-  "author": "BitPay <dev@bitpay.com>",
-  "version": "0.0.3",
+  "name": "bitcoinconsensus",
+  "description": "Node binding for libbitcoinconsensus from Bitcoin Core",
+  "author": "Braydon Fuller",
+  "version": "0.1.0",
   "main": "./index.js",
-  "repository": "git://github.com/bitpay/node-libbitcoinconsensus.git",
-  "homepage": "https://github.com/bitpay/node-libbitcoinconsensus",
+  "repository": "git://github.com/braydonf/node-libbitcoinconsensus.git",
+  "homepage": "https://github.com/braydonf/node-libbitcoinconsensus",
   "bugs": {
-    "url": "https://github.com/bitpay/node-libbitcoinconsensus/issues"
+    "url": "https://github.com/braydonf/node-libbitcoinconsensus/issues"
   },
   "contributors": [
     {
-      "name": "Braydon Fuller",
-      "email": "braydon@bitpay.com"
+      "name": "Braydon Fuller"
     },
     {
-      "name": "Chris Kleeschulte",
-      "email": "chrisk@bitpay.com"
+      "name": "Chris Kleeschulte"
     }
   ],
   "scripts": {
-    "test": "mocha -R spec test --recursive",
-    "benchmark": "node benchmarks/index.js"
+    "test": "mocha -R spec test --recursive"
   },
   "tags": [
     "bitcoin",
-    "libbitcoinconsensus"
+    "libbitcoinconsensus",
+    "bitcoinconsensus"
   ],
   "devDependencies": {
     "chai": "^2.3.0",
-    "mocha": "^2.2.5",
-    "async": "^0.9.0",
-    "benchmark": "^1.0.0",
-    "bitcore": "^0.12.6"
+    "mocha": "^2.2.5"
   },
   "dependencies": {
     "nan": "^2.10.0"
